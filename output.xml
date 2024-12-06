@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on darwin)" generated="2024-12-06T16:06:14.378846" rpa="false" schemaversion="5">
+<suite id="s1" name="FirstRobot" source="/Users/isabeldossantos/PycharmProjects/FirstRobot">
+<suite id="s1-s1" name="TestSuite" source="/Users/isabeldossantos/PycharmProjects/FirstRobot/TestSuite">
+<suite id="s1-s1-s1" name="FunctionalTests" source="/Users/isabeldossantos/PycharmProjects/FirstRobot/TestSuite/FunctionalTests">
+<suite id="s1-s1-s1-s1" name="Sellpy" source="/Users/isabeldossantos/PycharmProjects/FirstRobot/TestSuite/FunctionalTests/sellpy.robot">
+<test id="s1-s1-s1-s1-t1" name="Successfully hide and show password in login function" line="100">
+<kw name="Test Setup">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:14.830090" level="INFO">Opening browser 'chrome' to base url 'https://www.sellpy.se'.</msg>
+<arg>https://www.sellpy.se</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-06T16:06:14.829862" elapsed="26.693497"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-06T16:06:41.526149" elapsed="0.389656"/>
+</kw>
+<kw name="Handle Cookie Banner">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div[3]/div/div/button[1]/span/span</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-06T16:06:41.920694" elapsed="0.069661"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:41.990922" level="INFO">Clicking element 'xpath://*[@id="app"]/div[3]/div/div/button[1]/span/span'.</msg>
+<arg>xpath://*[@id="app"]/div[3]/div/div/button[1]/span/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T16:06:41.990670" elapsed="0.122213"/>
+</kw>
+<doc>Waits until the cookies banner is shown and then accepts all cookies by clicking "Tillåt alla cookies"</doc>
+<status status="PASS" start="2024-12-06T16:06:41.918792" elapsed="0.194282"/>
+</kw>
+<kw name="Click Profile Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:42.114807" level="INFO">Clicking element 'xpath://a[.//i[@title='PROFILE']]'.</msg>
+<arg>xpath://a[.//i[@title='PROFILE']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T16:06:42.114409" elapsed="0.139966"/>
+</kw>
+<doc>Clicks on the profile button to open the login page</doc>
+<status status="PASS" start="2024-12-06T16:06:42.113438" elapsed="0.141226"/>
+</kw>
+<doc>Opens browser, accepts the cookies and clicks on the Profile button</doc>
+<status status="PASS" start="2024-12-06T16:06:14.829029" elapsed="27.425771"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-06T16:06:49.256405" level="INFO">Slept 7 seconds.</msg>
+<arg>7 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-06T16:06:42.255277" elapsed="7.001491"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:49.258640" level="INFO">Typing text 'ikemap741@deligy.com' into text field 'name:email'.</msg>
+<arg>name:email</arg>
+<arg>${right_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T16:06:49.257671" elapsed="0.335766"/>
+</kw>
+<kw name="Click Submit Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:49.594419" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T16:06:49.594215" elapsed="0.150338"/>
+</kw>
+<doc>Clicks on the submit button called "Fortsätt"</doc>
+<status status="PASS" start="2024-12-06T16:06:49.593899" elapsed="0.150778"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-06T16:06:54.746373" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-06T16:06:49.744887" elapsed="5.002202"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:54.748782" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2024-12-06T16:06:54.819531" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:password</arg>
+<arg>${right_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T16:06:54.747933" elapsed="0.256822"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-06T16:06:58.007817" level="INFO">Slept 3 seconds.</msg>
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-06T16:06:55.005161" elapsed="3.003018"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:58.050080" level="INFO">Element 'xpath://i[@title='EYE_FILLED']' is displayed.</msg>
+<arg>xpath://i[@title='EYE_FILLED']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-06T16:06:58.010026" elapsed="0.040204"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:06:58.050872" level="INFO">Clicking element 'xpath://i[@title='EYE_FILLED']'.</msg>
+<arg>xpath://i[@title='EYE_FILLED']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T16:06:58.050570" elapsed="0.087709"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-06T16:07:03.140019" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-06T16:06:58.138648" elapsed="5.001733"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-06T16:07:03.178736" level="INFO">Element 'xpath://i[@title='EYE_OFF_FILLED']' is displayed.</msg>
+<arg>xpath://i[@title='EYE_OFF_FILLED']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-06T16:07:03.141617" elapsed="0.037350"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-06T16:07:03.180101" elapsed="0.247050"/>
+</kw>
+<doc>Test aims to use the hide/show function in password field and expect function to be successful</doc>
+<tag>function</tag>
+<status status="PASS" start="2024-12-06T16:06:14.828025" elapsed="48.599477"/>
+</test>
+<doc>Login function on Sellpy.se</doc>
+<status status="PASS" start="2024-12-06T16:06:14.457230" elapsed="48.972149"/>
+</suite>
+<status status="PASS" start="2024-12-06T16:06:14.455717" elapsed="48.975366"/>
+</suite>
+<status status="PASS" start="2024-12-06T16:06:14.453842" elapsed="48.978190"/>
+</suite>
+<status status="PASS" start="2024-12-06T16:06:14.386466" elapsed="49.046952"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">function</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FirstRobot">FirstRobot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestSuite">FirstRobot.TestSuite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="FunctionalTests">FirstRobot.TestSuite.FunctionalTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Sellpy">FirstRobot.TestSuite.FunctionalTests.Sellpy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
