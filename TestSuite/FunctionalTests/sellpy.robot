@@ -1,6 +1,6 @@
 
 *** Settings ***
-Documentation    Login function on Sellpy.se
+Documentation    Login function on Sellpy.se. Note that all tests contains multiple Sleep keywords, these are only to create a slower execution when demoing the test cases.
 Library    SeleniumLibrary
 
 *** Variables ***
